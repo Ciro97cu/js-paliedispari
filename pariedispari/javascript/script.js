@@ -7,7 +7,7 @@
 
 const userEvenOrOddChoice = prompt("Scegli tra Pari e Dispari", "pari").trim().toLocaleLowerCase();
 
-console.log(userEvenOrOddChoice);
+console.log(`Lutente ha scelto: ${userEvenOrOddChoice}`);
 
 let userNumber;
 
@@ -51,7 +51,7 @@ function checkType(number) {
 console.log(`La somma è un numero ${sumResult}`);
 
 if (userEvenOrOddChoice === sumResult) {
-    console.log("Human Win");
+    console.log("L'utente vince");
 } else {
-    console.log("Bot Win");
+    console.log("Il Bot vince");
 }
