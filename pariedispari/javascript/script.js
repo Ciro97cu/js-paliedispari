@@ -5,7 +5,7 @@
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto.
 
-const userEvenOrOddChoice = prompt("Scegli tra Pari e Dispari").trim();
+const userEvenOrOddChoice = prompt("Scegli tra Pari e Dispari", "pari").trim();
 
 let choice = false;
 
@@ -21,7 +21,7 @@ let userNumber;
 
 do {
     userNumber = parseInt(prompt("Scegli un numero da 1 a 5"));
-} while (isNaN(userNumber));
+} while (isNaN(userNumber) || userNumber > 5 || userNumber === 0);
 
 console.log(`Numero utente: ${userNumber}`)
 
