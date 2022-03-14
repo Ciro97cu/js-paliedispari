@@ -7,7 +7,7 @@
 
 const userEvenOrOddChoice = prompt("Scegli tra Pari e Dispari", "pari").trim().toLocaleLowerCase();
 
-console.log(`Lutente ha scelto: ${userEvenOrOddChoice}`);
+console.log(`L'utente ha scelto: ${userEvenOrOddChoice}`);
 
 let userNumber;
 
