@@ -41,27 +41,29 @@ const sumUserBot = userNumber + botNumber;
 
 console.log(`La somma dei due numeri è: ${sumUserBot}`);
 
-const whoWin = checkWinner(sumUserBot);
+const sumResult = checkType(sumUserBot);
 
-function checkWinner(number) {
-
-    let resultsEvenOdd = false;
+function checkType(number) {
 
     if (number % 2 === 0) {
-        resultsEvenOdd = true;
+        resultsEvenOdd = "La somma dei due numeri è un numero pari";
+
     } else {
-        resultsEvenOdd = false;
+        resultsEvenOdd = "La somma dei due numeri è un numero dispari";
     }
 
-    let resultWinner;
-
-    if (choice === resultsEvenOdd) {
-        resultWinner = "Human Win";
-    } else {
-        resultWinner = "Bot Win"
-    }
-    return resultWinner;
+    return resultsEvenOdd;
 
 }
 
-console.log(whoWin);
+console.log(sumResult);
+
+let resultWinner;
+
+if (choice === controlResult) {
+    resultWinner = "Human Win";
+} else {
+    resultWinner = "Bot Win"
+}
+
+console.log(resultWinner);
