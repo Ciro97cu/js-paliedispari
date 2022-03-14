@@ -5,17 +5,9 @@
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto.
 
-const userEvenOrOddChoice = prompt("Scegli tra Pari e Dispari", "pari").trim();
+const userEvenOrOddChoice = prompt("Scegli tra Pari e Dispari", "pari").trim().toLocaleLowerCase();
 
-let choice = false;
-
-if (userEvenOrOddChoice === "pari") {
-    choice = true;
-} else if (userEvenOrOddChoice === "dispari") {
-    choice = false;
-}
-
-console.log(choice);
+console.log(userEvenOrOddChoice);
 
 let userNumber;
 
@@ -45,33 +37,21 @@ const sumResult = checkType(sumUserBot);
 
 function checkType(number) {
 
-    resultsEvenOdd = false;
-
     if (number % 2 === 0) {
-        resultsEvenOdd = true;
+        resultsEvenOdd = "pari";
 
     } else {
-        resultsEvenOdd = false;
+        resultsEvenOdd = "dispari";
     }
 
     return resultsEvenOdd;
 
 }
 
-if (sumResult) {
-    console.log("La somma è un numero pari");
+console.log(`La somma è un numero ${sumResult}`);
+
+if (userEvenOrOddChoice === sumResult) {
+    console.log("Human Win");
 } else {
-    console.log("La somma è un numero dispari");
+    console.log("Bot Win");
 }
-
-console.log(sumResult);
-
-let resultWinner;
-
-if (choice === sumResult) {
-    resultWinner = "Human Win";
-} else {
-    resultWinner = "Bot Win"
-}
-
-console.log(resultWinner);
