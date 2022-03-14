@@ -45,22 +45,30 @@ const sumResult = checkType(sumUserBot);
 
 function checkType(number) {
 
+    resultsEvenOdd = false;
+
     if (number % 2 === 0) {
-        resultsEvenOdd = "La somma dei due numeri è un numero pari";
+        resultsEvenOdd = true;
 
     } else {
-        resultsEvenOdd = "La somma dei due numeri è un numero dispari";
+        resultsEvenOdd = false;
     }
 
     return resultsEvenOdd;
 
 }
 
+if (sumResult) {
+    console.log("La somma è un numero pari");
+} else {
+    console.log("La somma è un numero dispari");
+}
+
 console.log(sumResult);
 
 let resultWinner;
 
-if (choice === controlResult) {
+if (choice === sumResult) {
     resultWinner = "Human Win";
 } else {
     resultWinner = "Bot Win"
