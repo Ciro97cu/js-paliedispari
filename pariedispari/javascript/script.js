@@ -6,14 +6,11 @@
 // Dichiariamo chi ha vinto.
 
 // chiedo all'utente di scegliere tra pari e dispari controllando anche che non scriva altro
-let odd = /dispari/;
-let even = /pari/;
-
 let userEvenOrOddChoice = "";
 do {
     userEvenOrOddChoice = prompt("Scegli tra Pari e Dispari", "pari").trim().toLocaleLowerCase();
 
-} while (!userEvenOrOddChoice.match(even) && !userEvenOrOddChoice.match(odd));
+} while (userEvenOrOddChoice !== "pari" && userEvenOrOddChoice !== "dispari");
 
 // stampo nella console cosa ha scelto l'utente
 console.log(`L'utente ha scelto: ${userEvenOrOddChoice}`);
