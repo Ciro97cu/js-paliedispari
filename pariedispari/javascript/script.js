@@ -5,7 +5,7 @@
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto.
 
-// chiedo all'utente di scegliere tra pari e dispari
+// chiedo all'utente di scegliere tra pari e dispari controllando anche che non scriva altro
 let odd = /dispari/;
 let even = /pari/;
 
